@@ -78,5 +78,20 @@ public class GameManager : MonoBehaviour
         LoadLevel(world, stage + 1);
     }
 
+    public void AddCoin()
+    {
+        coins++;
+
+        if (coins == 100)
+        {
+            coins = 0;
+            AddLife();
+        }
+    }
+
+    public void AddLife()
+    {
+        lives++;
+    }
 
 }
